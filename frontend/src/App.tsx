@@ -1,4 +1,10 @@
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import {
+	Navigate,
+	Route,
+	Routes,
+	useLocation,
+	useNavigate,
+} from "react-router-dom";
 import "./App.css";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
@@ -25,6 +31,7 @@ function App() {
 			<Route path="/signup" element={<Signup />} />
 			<Route path="/signin" element={<Signin />} />
 			<Route path="/blogs" element={<Blogs />} />
+			<Route path="/" element={<Navigate to={"/blogs"} />} />
 			<Route path="/blog/:id" element={<Blog />} />
 			<Route path="/publish" element={<Publish />} />
 		</Routes>
